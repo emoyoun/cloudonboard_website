@@ -269,26 +269,24 @@ body {
   padding-right: 5px;
 }
 .gtco-banner-area .col-md-6 .card .card-img-top {
-  max-width: 430px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-right: 0;
+  max-width: 90%;
+  margin: -100px 180px;
 }
 @media (max-width: 1400px) {
   .gtco-banner-area .col-md-6 .card .card-img-top {
-    max-width: 400px;
-    margin-top: 20px;
-    margin-right: auto;
+    max-width: 90%;
+    margin: -100px 180px;
   }
 }
 @media (max-width: 1199px) {
   .gtco-banner-area .col-md-6 .card .card-img-top {
-    max-width: 350px;
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 767px) {
   .gtco-banner-area .col-md-6 .card .card-img-top {
-    margin-top: 100px;
+    margin: 0 auto;
   }
 }
 
