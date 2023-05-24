@@ -21,6 +21,29 @@
     <style>
 
     </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('VVUL3cnavU9pHZHUM');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('click', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
@@ -367,12 +390,12 @@
 <footer class="container-fluid" id="gtco-footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6" id="contact">
+            <div class="col-lg-6" id="contact-form">
                 <h4> Contact Us </h4>
                 <input type="text" class="form-control" placeholder="Full Name">
                 <input type="email" class="form-control" placeholder="Email Address">
                 <textarea class="form-control" placeholder="Message"></textarea>
-                <a href="#" class="submit-button">READ MORE <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <a href="#" class="submit-button">Submit <i class="fa fa-angle-right" aria-hidden="true"></i></a>
             </div>
             <div class="col-lg-6">
                 <div class="row">
