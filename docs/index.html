@@ -38,7 +38,7 @@
                 emailjs.sendForm('service_wkihtud', 'template_l91xmhb', this)
                     .then(function() {
                         console.log('SUCCESS!');
-                        this.value = "";
+                        document.getElementById('contact-form').value = "";
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
